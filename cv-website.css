@@ -21,17 +21,20 @@ body{
 
 .header{
     height: 10%;
-    width: 95%;
+    width: 90%;
     display: flex;
     justify-content: space-between;;
     align-items: center;
+    margin-top: 15px;
     padding-left:50px;
     padding-right: 50px;
     top: 0;
     color: whitesmoke;
     position: fixed;
     z-index: 1000;
-    
+    background-color:#ffd90041;
+    border-radius:70px;
+    overflow: hidden;
 }
 
 .header ::before{
@@ -103,7 +106,7 @@ body{
 
 #home h1{
     font-size: 5rem;
-    margin-bottom: 20px;
+   padding-top: 30px;
     display: inline-block;    
     
 }
@@ -143,6 +146,12 @@ body{
    
 }
 
+.github-link{
+    color: inherit;
+}
+
+
+
 .linkdin,
 .Twitter,
 .facebook,
@@ -165,6 +174,9 @@ body{
     transition: .5s;
 }
 
+
+
+
 .linkdin:hover,
 .Twitter:hover,
 .facebook:hover,
@@ -183,6 +195,7 @@ body{
     width: 0;
     height: 100%;
     background: white;
+  
     position: absolute;
     z-index: -1;
     top: 0;
@@ -198,35 +211,10 @@ body{
     width: 100%;
 }
 
-
-#about-me{
-     height: 100%;
-    width: 50%;
-    color: #f5f5f5;
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-  position: absolute;
-  right: 10px;
-
-}
-
-
-#about-me h3{
-    font-size: 2rem;
-    margin-bottom: 0.7em;
-}
-
-#about-me p{
-       font-family: outfit;
-        font-size: 1.2rem;
-      text-transform: capitalize;
-    
-}
-
 #projects{
     height: 100%;
-    width: 100%;
+    width: 95%;
+    height: 100vh;
     display: flex;
     color: whitesmoke;
    justify-content: center;
@@ -261,6 +249,36 @@ body{
        padding: 20px 0;
        color: white;
 }
+
+
+#about-me{
+     height: 100%;
+    width: 50%;
+    color: #f5f5f5;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+  position: absolute;
+  right: 10px;
+
+}
+
+
+#about-me h3{
+    font-size: 2rem;
+    margin-bottom: 0.7em;
+}
+
+#about-me p{
+       font-family: outfit;
+        font-size: 1.2rem;
+      text-transform: capitalize;
+    
+}
+
+
+
+
 
 
 

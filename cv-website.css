@@ -1,0 +1,311 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 16px;
+   font-family: 'Panchang', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(v1016-b-09.jpg);
+    background-position: cover;
+}
+
+@font-face{
+    font-family: myfont;
+    src: url(monumentextended-freeforpersonaluse/MonumentExtended-FreeForPersonalUse/MonumentExtended-Regular.otf);
+}
+
+.header{
+    height: 10%;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;;
+    align-items: center;
+    padding-left:50px;
+    padding-right: 50px;
+    top: 0;
+    color: whitesmoke;
+    position: fixed;
+    z-index: 1000;
+    
+}
+
+.header ::before{
+     transform: scaleY(1);
+}
+
+.header h1{
+    font-family: outfit;
+    text-transform: uppercase;
+    opacity: 0;
+    animation:  1s ease-in forwards slide-down ;
+}
+
+.navbar a::after{
+      content: ' ';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 3px;
+      background: #fff;;
+      border-radius: 5px;
+      transition: transform .5s;
+      transform-origin: right ;
+      transform: scalex(0);
+}
+
+.navbar a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+ 
+}
+
+.navbar a{
+    height: 100%;
+    margin-right: 20px;
+    text-decoration: none;
+    display: inline-block;
+    color: whitesmoke;
+    opacity: 0;
+    animation:  .5s ease-in  forwards slide-top ;
+    animation-delay: calc(.2s * var(--i));
+   
+}
+
+#section ,
+#section,
+#section{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#home{
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-left: 3rem; 
+    flex-direction: column;
+    color: whitesmoke;
+   opacity: 0;
+   animation: 1s linear forwards slide-right;
+   animation-delay: calc(.5s * var(--i));
+   font-family: 'Clash Display', sans-serif;
+}
+
+#home h1{
+    font-size: 5rem;
+    margin-bottom: 20px;
+    display: inline-block;    
+    
+}
+
+#home h1 span{
+    color: yellowgreen;
+}
+
+#home h3{
+    margin: 0px;
+    padding: 0;
+    display: inline-block;
+    font-size: 2rem;
+}
+
+#home p{
+     margin-top: 10px;
+    font-size: 1.5rem;
+      display: inline-block;
+    line-height: 35px;
+    font-family: 'Tanker', sans-serif;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+}
+
+#home p span{
+     margin-top: 10px;
+    font-size: 1.5rem;
+      display: inline-block;
+      word-spacing: 2px;
+ 
+}
+.social-media{
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+   
+}
+
+.linkdin,
+.Twitter,
+.facebook,
+.Github,
+.instagram{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.linkdin:hover,
+.Twitter:hover,
+.facebook:hover,
+.Github:hover,
+.instagram:hover{
+    color: black;
+}
+
+
+.linkdin::before,
+.Twitter::before,
+.facebook::before,
+.Github::before,
+.instagram::before{
+    content: '';
+    width: 0;
+    height: 100%;
+    background: white;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+   transition: .5s;
+}
+
+.linkdin:hover::before,
+.Github:hover::before,
+.Twitter:hover::before,
+.facebook:hover::before,
+.instagram:hover::before{
+    width: 100%;
+}
+
+
+#about-me{
+     height: 100%;
+    width: 50%;
+    color: #f5f5f5;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+  position: absolute;
+  right: 10px;
+
+}
+
+
+#about-me h3{
+    font-size: 2rem;
+    margin-bottom: 0.7em;
+}
+
+#about-me p{
+       font-family: outfit;
+        font-size: 1.2rem;
+      text-transform: capitalize;
+    
+}
+
+#projects{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    color: whitesmoke;
+   justify-content: center;
+   position: relative;
+   gap: 25px;
+   align-items: center;
+   margin: 0 30px;
+}
+
+
+
+#project-1,
+#project-2,
+#project-3,
+#project-4{
+    height: 70%;
+    width: 100%;
+    display: inline-block;
+    border: 2px solid white;
+    padding: 0 20px;
+    border-radius: 20px;
+    word-spacing: 3px;
+    line-height: 20px;
+    color: whitesmoke;
+}
+
+#project-1 h3,
+#project-2 h3,
+#project-3 h3,
+#project-4 h3{
+       text-align: center;
+       padding: 20px 0;
+       color: white;
+}
+
+
+
+
+/* KEYFRAME SECTION */
+
+@keyframes slide-right{
+    0%{
+        opacity:0;
+        transform: translateX(-100px);
+    }
+    100%{
+         opacity:1;
+        transform: translateX(0);
+    }
+}
+@keyframes slide-down {
+     0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+     100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-top {
+     0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes autofade {
+      0%{
+        opacity: 0;
+        transform: translateY(100px);
+      }
+       100%{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
